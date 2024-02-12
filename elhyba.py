@@ -27,7 +27,7 @@ from pyrogram import (
     __version__ as v
 )
 
-#حقوق عمك الديلر يحيوان @KJJ_K
+#حقوق عمك الديلر يحيوان @mmwvm
 # اسرق اسرق هعمل نفسي م شايفك  
 ownerID = int("1591029063") #ايدي الادمن 
 api_hash = Config.API_HASH #ايبي هاش 
@@ -332,8 +332,7 @@ async def on_Callback(c,m):
       botdb.delete(f"add:{m.from_user.id}")
       botdb.delete(f"unban:{m.from_user.id}")
 
-   if m.data == "back" and (m.from_user.id == ownerID or m.from_user.id in botdb.get("db"+token.split(":")[0])["admins"]):
-      #await m.answer("• تم الرجوع بنجاح والغاء كل شي ",show_alert=True)
+   if m.data == "back" and (m.from_user.id == ownerID or m.from_user.id in botdb.get("db"+token.split(":")[0])["admins"     #await m.answer("• تم الرجوع بنجاح والغاء كل شي ",show_alert=True)
       await m.edit_message_text(f"**• أهلاً بك ⌯ {m.from_user.mention}\n• إليك لوحة تحكم الادمن**",reply_markup=STARTKEY)
       botdb.delete(f"broad:{m.from_user.id}")
       botdb.delete(f"whois:{m.from_user.id}")
@@ -410,7 +409,7 @@ async def generator_and_about(app,m):
       text += "🐍 اللـغـة الـبـرمـجـيـة - بـايـثـون "
       text += f"\n🔥 اصـدار بايروجرام {v}"
       text += f"\n🌱 اصـدار تـيـلـيـثـون {v2}"
-      text += f"\n\n👤 مـطـور الـبـوت: @KJJ_K @c_1_p"
+      text += f"\n\n👤 مـطـور الـبـوت: @mmwvm "
       await m.reply(text, quote=True)
 
     if m.text == "بـايـروجـرام":
@@ -524,5 +523,5 @@ async def generator_and_about(app,m):
 
 app.start()
 bot.start()
-print("تم تشغيل البوت @KJJ_K")
+print("تم تشغيل البوت @mmwvm")
 idle()
